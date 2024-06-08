@@ -2,11 +2,11 @@ import tkinter as tk
 
 window = tk.Tk()
 
-window.geometry("500x300")
-#the thing that 
+window.geometry("400x300")
+
 def on_button_click():
     label.config(text="Sucsessfully banned!")
-# password function
+
 def check_password():
     entered_password = password_entry.get() #type: ignore
     if entered_password == "Admin56":
