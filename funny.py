@@ -1,17 +1,17 @@
 import tkinter as tk
 
-# Create the main window
+
 window = tk.Tk()
 window.geometry("400x300")
 window.title("Acount Ban Admin")
 window.iconbitmap("logo.ico")
 
 
-# Define the function to be called when the button is clicked
+
 def on_button_click():
     print("Button clicked!")
 
-# Define the function to check the username and password
+
 def check_credentials():
     entered_username = username_entry.get()
     entered_password = password_entry.get()
@@ -33,41 +33,40 @@ def show_ban_widgets():
     ban_button.grid(row=5, column=0, columnspan=2, pady=10)
     error_label.grid_forget()  # Hide the error label if present
 
-# Function to ban the account
+
 def ban_account():
     friend_username = ban_username_entry.get()
     status_label.config(text=f"Account '{friend_username}' has been banned.")
     status_label.grid(row=6, column=0, columnspan=2, pady=10)
 
-# Create and grid the initial username entry
+
 username_label = tk.Label(window, text="Enter Your Username:")
 username_label.grid(row=0, column=0, padx=10, pady=10)
 
 username_entry = tk.Entry(window)
 username_entry.grid(row=0, column=1, padx=10, pady=10)
 
-# Create and grid the initial password entry
+
 password_label = tk.Label(window, text="Enter Your Password:")
 password_label.grid(row=1, column=0, padx=10, pady=10)
 
-password_entry = tk.Entry(window, show="*")  # Use show="*" to hide the password characters
+password_entry = tk.Entry(window, show="*")  
 password_entry.grid(row=1, column=1, padx=10, pady=10)
 
-# Create and grid the submit button for the initial credentials
 submit_button = tk.Button(window, text="Submit", command=check_credentials)
 submit_button.grid(row=2, column=0, columnspan=2, pady=10)
 
-# Create and grid the error label for incorrect credentials attempts
+
 error_label = tk.Label(window, text="", fg="red")
 error_label.grid(row=3, column=0, columnspan=2, pady=10)
 
-# Create widgets for banning an account but do not grid them initially
+
 ban_username_label = tk.Label(window, text="Enter Account Username:")
 ban_username_entry = tk.Entry(window)
 ban_button = tk.Button(window, text="Ban Account", command=ban_account)
 
-# Create the status label to show the ban status but do not grid it initially
+
 status_label = tk.Label(window, text="")
 
-# Run the Tkinter event loop
+
 window.mainloop()
