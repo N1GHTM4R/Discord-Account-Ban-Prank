@@ -2,7 +2,7 @@ import tkinter as tk
 
 window = tk.Tk()
 
-window.geometry("400x300")
+window.geometry("500x300")
 #the thing that 
 def on_button_click():
     label.config(text="Sucsessfully banned!")
@@ -40,3 +40,4 @@ error_label = tk.Label(window, text="", fg="red")
 error_label.grid(row=4, column=0, columnspan=2, pady=10)
 
 window.mainloop()
+#end of program
