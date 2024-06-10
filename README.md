@@ -1,1 +1,2 @@
 I made this to prank my freinds little brother, you can change the username and password to whatever you like
+the default username is "Nightmare" and the default password is "Admin56" its case sensitive 
