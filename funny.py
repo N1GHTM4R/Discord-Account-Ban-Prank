@@ -66,6 +66,7 @@ ban_username_entry = tk.Entry(window)
 ban_button = tk.Button(window, text="Ban Account", command=ban_account)
 
 
+# nice
 status_label = tk.Label(window, text="")
 
 
